@@ -1,0 +1,23 @@
+
+<h1>{{ title }} </h1>
+
+<h3>Counter: {{ parentCounter }}</h3>
+
+<h2>Developers</h2>
+
+<ul>
+	<li (click)="select(developer)" 
+		*ngFor="let developer of developers"> 
+		{{ developer.name }} - {{developer.skill}}
+	</li>
+</ul>
+
+<hr/>
+
+<child-component 
+	*ngIf="selectedDeveloper" 
+	(update)="updateInPrent($event)" 
+	[counter]= "parentCounter"
+	[selectedDeveloper]="selectedDeveloper"
+	(changeSkill)="updateMySkill($event)">
+</child-component>

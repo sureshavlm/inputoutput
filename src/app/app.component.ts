@@ -5,6 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'module-two';
+  dob = new Date();
+
+  username: string = "Smith";
+
+  updateName() {
+  	alert(this.username);
+  }
 }

@@ -1,0 +1,17 @@
+<h3>{{ title }}</h3>
+
+<h3>Count value: {{ counter }}</h3>
+
+<button (click)="updateCounterInChild()">Update</button>
+
+<h3>Selected Developer</h3>
+
+<p>Name: {{ selectedDeveloper.name }}</p>
+<p>Skill: {{selectedDeveloper.skill}}</p>
+<p>Salary: {{selectedDeveloper.salary}}</p>
+
+Enter new skill: <input type="text" [(ngModel)]="skill">
+
+<button (click)="updateSkill()">Update</button>
+
+
